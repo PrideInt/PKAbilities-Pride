@@ -25,6 +25,7 @@
 
 .idea
 *.iml
+pom.xml
 /target/
 /src/main/resources/
 /src/test
