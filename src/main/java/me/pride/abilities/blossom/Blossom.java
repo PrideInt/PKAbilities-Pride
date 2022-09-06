@@ -94,7 +94,7 @@ public class Blossom extends PlantAbility implements AddonAbility, ComboAbility 
 			boolean canGeneratePlants = b.getType() == Material.GRASS_BLOCK || b.getType() == Material.DIRT || (b.getType().name().contains("LEAVES") && isAir(b.getRelative(BlockFace.UP).getType()));
 			boolean canGenerateMushroom = spawnableMushroom(b.getType());
 			boolean canGenerateSeaPlants = isWater(b.getType()) && spawnableInWater(b.getRelative(BlockFace.DOWN).getType());
-			return !RegionProtection.isRegionProtected(player, b.getLocation(), this) || canGeneratePlants || canGenerateMushroom || canGenerateSeaPlants;
+			return !RegionProtection.isRegionProtected(player, b.getLocation(), this) && (canGeneratePlants || canGenerateMushroom || canGenerateSeaPlants);
 		};
 		List<Block> blocks =
 				GeneralMethods.getBlocksAroundPoint(player.getLocation(), radius)
