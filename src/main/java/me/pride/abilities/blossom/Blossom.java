@@ -115,10 +115,12 @@ public class Blossom extends PlantAbility implements AddonAbility, ComboAbility 
 							ParticleEffect.VILLAGER_HAPPY.display(b.getLocation().clone().add(0.5, 0.5, 0.5), 3, 0.2, 0.2, 0.2, 0.2);
 						}
 					}
+					/*
 					if (isGrowable(b.getType())) {
 						b.getRelative(BlockFace.UP).setType(b.getType());
 						ParticleEffect.VILLAGER_HAPPY.display(b.getLocation().clone().add(0.5, 0.5, 0.5), 3, 0.2, 0.2, 0.2, 0.2);
 					}
+					 */
 				}
 				delay = 0;
 			}
